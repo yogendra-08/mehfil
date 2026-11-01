@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 995" width="1400" height="995" role="img" aria-labelledby="t d">
+  <title id="t">Mehfil application flow</title>
+  <desc id="d">Host workflow, guest invitation and RSVP workflow with decision nodes, database interactions, and the catering calculation.</desc>
+
+  <style>
+    text { font-family: "Segoe UI", Helvetica, Arial, sans-serif; fill: #2B2B2B; }
+    .title { font-family: Georgia, "Times New Roman", serif; font-size: 28px; }
+    .subtitle { font-size: 13px; fill: #6B665D; }
+    .section { font-family: Georgia, "Times New Roman", serif; font-size: 15px; letter-spacing: 2px; }
+    .b { font-size: 13px; font-weight: 600; text-anchor: middle; }
+    .s { font-size: 11px; fill: #6B665D; text-anchor: middle; }
+    .d { font-size: 12px; font-weight: 600; text-anchor: middle; }
+    .yn { font-size: 11px; font-weight: 600; fill: #7A5C2E; }
+    .note { font-size: 11px; fill: #6B665D; }
+    .row-b { font-size: 12px; font-weight: 600; }
+    .row-r { font-size: 12px; fill: #4A463F; }
+    .badge-t { font-size: 11px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; }
+    .tx-t { font-size: 11px; fill: #FFFFFF; text-anchor: middle; }
+    .tx-h { font-size: 12px; font-weight: 700; fill: #FFFFFF; text-anchor: middle; }
+    .end-t { fill: #6E2F22; }
+    .box { fill: #FFFFFF; stroke: #CFC8BB; stroke-width: 1.3; }
+    .dec { fill: #F3EEE4; stroke: #8C857A; stroke-width: 1.3; }
+    .end { fill: #FAF1EE; stroke: #B9786A; stroke-width: 1.3; }
+    .tx  { fill: #2B2B2B; stroke: #2B2B2B; stroke-width: 1.3; }
+    .panel { fill: #FFFFFF; stroke: #E4DFD5; stroke-width: 1.3; }
+    .ln { fill: none; stroke: #2B2B2B; stroke-width: 1.4; }
+    .dash { fill: none; stroke: #8C857A; stroke-width: 1.4; stroke-dasharray: 5 4; }
+    .sep { stroke: #E4DFD5; stroke-width: 1.2; }
+    .badge { fill: #7A5C2E; }
+  </style>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#2B2B2B"/>
+    </marker>
+    <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#8C857A"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="995" fill="#FAF7F2"/>
+
+  <!-- Header -->
+  <text x="40" y="46" class="title">Mehfil: Application Flow</text>
+  <text x="40" y="68" class="subtitle">Planned design (Phase 0). Host workflow, guest invitation and RSVP, database interactions, catering calculation.</text>
+
+  <!-- ===================== HOST WORKFLOW ===================== -->
+  <text x="40" y="102" class="section">HOST WORKFLOW</text>
+
+  <!-- Row 1 -->
+  <rect class="box" x="40" y="115" width="190" height="60" rx="4"/>
+  <text x="135" y="142" class="b">Register / log in</text>
+  <text x="135" y="160" class="s">role: host</text>
+
+  <rect class="box" x="266" y="115" width="190" height="60" rx="4"/>
+  <text x="361" y="142" class="b">Create event</text>
+  <text x="361" y="160" class="s">title, deadline, buffer %</text>
+  <circle class="badge" cx="280" cy="115" r="10"/><text x="280" y="119" class="badge-t">1</text>
+
+  <rect class="box" x="492" y="115" width="190" height="60" rx="4"/>
+  <text x="587" y="142" class="b">Add functions</text>
+  <text x="587" y="160" class="s">Mehendi, Sangeet, Wedding…</text>
+  <circle class="badge" cx="506" cy="115" r="10"/><text x="506" y="119" class="badge-t">1</text>
+
+  <rect class="box" x="718" y="115" width="190" height="60" rx="4"/>
+  <text x="813" y="142" class="b">Add families</text>
+  <text x="813" y="160" class="s">members · CSV import</text>
+  <circle class="badge" cx="732" cy="115" r="10"/><text x="732" y="119" class="badge-t">2</text>
+
+  <rect class="box" x="944" y="115" width="190" height="60" rx="4"/>
+  <text x="1039" y="142" class="b">Generate invitations</text>
+  <text x="1039" y="160" class="s">secure token per family</text>
+  <circle class="badge" cx="958" cy="115" r="10"/><text x="958" y="119" class="badge-t">3</text>
+
+  <rect class="box" x="1170" y="115" width="190" height="60" rx="4"/>
+  <text x="1265" y="142" class="b">Share link</text>
+  <text x="1265" y="160" class="s">WhatsApp · QR · copy</text>
+
+  <path class="ln" d="M230 145H264" marker-end="url(#arr)"/>
+  <path class="ln" d="M456 145H490" marker-end="url(#arr)"/>
+  <path class="ln" d="M682 145H716" marker-end="url(#arr)"/>
+  <path class="ln" d="M908 145H942" marker-end="url(#arr)"/>
+  <path class="ln" d="M1134 145H1168" marker-end="url(#arr)"/>
+
+  <!-- Row 2 (right to left) -->
+  <rect class="box" x="1170" y="215" width="190" height="60" rx="4"/>
+  <text x="1265" y="242" class="b">Monitor dashboard</text>
+  <text x="1265" y="260" class="s">live RSVP statistics</text>
+  <circle class="badge" cx="1184" cy="215" r="10"/><text x="1184" y="219" class="badge-t">7</text>
+
+  <rect class="box" x="944" y="215" width="190" height="60" rx="4"/>
+  <text x="1039" y="242" class="b">Nudge pending families</text>
+  <text x="1039" y="260" class="s">prefilled WhatsApp reminder</text>
+  <circle class="badge" cx="958" cy="215" r="10"/><text x="958" y="219" class="badge-t">7</text>
+
+  <rect class="box" x="718" y="215" width="190" height="60" rx="4"/>
+  <text x="813" y="242" class="b">Catering report</text>
+  <text x="813" y="260" class="s">review buffer · export CSV</text>
+  <circle class="badge" cx="732" cy="215" r="10"/><text x="732" y="219" class="badge-t">8</text>
+
+  <path class="ln" d="M1265 175V213" marker-end="url(#arr)"/>
+  <path class="ln" d="M1170 245H1136" marker-end="url(#arr)"/>
+  <path class="ln" d="M944 245H910" marker-end="url(#arr)"/>
+
+  <!-- ===================== GUEST WORKFLOW ===================== -->
+  <line class="sep" x1="40" y1="295" x2="1360" y2="295"/>
+  <text x="40" y="322" class="section">GUEST INVITATION &amp; RSVP WORKFLOW</text>
+
+  <!-- dashed link: submitted RSVPs feed the dashboard -->
+  <path class="dash" d="M1295 370V279" marker-end="url(#arrg)"/>
+  <text x="1287" y="335" class="note" text-anchor="end">RSVPs update the dashboard</text>
+
+  <!-- Open link -->
+  <rect class="box" x="30" y="380" width="140" height="60" rx="4"/>
+  <text x="100" y="406" class="b">Guest opens link</text>
+  <text x="100" y="424" class="s">/i/&lt;token&gt;</text>
+  <circle class="badge" cx="44" cy="380" r="10"/><text x="44" y="384" class="badge-t">4</text>
+
+  <!-- Decision diamonds -->
+  <path class="dec" d="M200 410L270 368L340 410L270 452Z"/>
+  <text x="270" y="407" class="d">Token valid</text><text x="270" y="422" class="d">and active?</text>
+
+  <path class="dec" d="M370 410L440 368L510 410L440 452Z"/>
+  <text x="440" y="407" class="d">Deadline</text><text x="440" y="422" class="d">passed?</text>
+
+  <path class="dec" d="M540 410L610 368L680 410L610 452Z"/>
+  <text x="610" y="407" class="d">Within rate</text><text x="610" y="422" class="d">limit?</text>
+
+  <!-- Form -->
+  <rect class="box" x="710" y="380" width="140" height="60" rx="4"/>
+  <text x="780" y="406" class="b">Show RSVP form</text>
+  <text x="780" y="424" class="s">guest submits</text>
+  <circle class="badge" cx="724" cy="380" r="10"/><text x="724" y="384" class="badge-t">5</text>
+
+  <path class="dec" d="M880 410L950 368L1020 410L950 452Z"/>
+  <text x="950" y="407" class="d">Input</text><text x="950" y="422" class="d">valid?</text>
+
+  <path class="dec" d="M1050 410L1120 368L1190 410L1120 452Z"/>
+  <text x="1120" y="407" class="d">Attendees ≤</text><text x="1120" y="422" class="d">invited?</text>
+
+  <!-- Transaction -->
+  <rect class="tx" x="1220" y="370" width="150" height="80" rx="4"/>
+  <text x="1295" y="389" class="tx-h">BEGIN transaction</text>
+  <text x="1295" y="406" class="tx-t">upsert RSVP rows</text>
+  <text x="1295" y="420" class="tx-t">replace attendees</text>
+  <text x="1295" y="434" class="tx-t">audit log · COMMIT</text>
+  <circle class="badge" cx="1234" cy="370" r="10"/><text x="1234" y="374" class="badge-t">6</text>
+
+  <!-- Forward arrows -->
+  <path class="ln" d="M170 410H198" marker-end="url(#arr)"/>
+  <path class="ln" d="M340 410H368" marker-end="url(#arr)"/>
+  <path class="ln" d="M510 410H538" marker-end="url(#arr)"/>
+  <path class="ln" d="M680 410H708" marker-end="url(#arr)"/>
+  <path class="ln" d="M850 410H878" marker-end="url(#arr)"/>
+  <path class="ln" d="M1020 410H1048" marker-end="url(#arr)"/>
+  <path class="ln" d="M1190 410H1218" marker-end="url(#arr)"/>
+
+  <!-- yes / no labels (horizontal) -->
+  <text x="355" y="402" class="yn" text-anchor="middle">yes</text>
+  <text x="525" y="402" class="yn" text-anchor="middle">no</text>
+  <text x="695" y="402" class="yn" text-anchor="middle">yes</text>
+  <text x="1035" y="402" class="yn" text-anchor="middle">yes</text>
+  <text x="1205" y="402" class="yn" text-anchor="middle">yes</text>
+
+  <!-- Downward branches -->
+  <path class="ln" d="M270 452V498" marker-end="url(#arr)"/>
+  <path class="ln" d="M440 452V498" marker-end="url(#arr)"/>
+  <path class="ln" d="M610 452V498" marker-end="url(#arr)"/>
+  <path class="ln" d="M950 452V498" marker-end="url(#arr)"/>
+  <path class="ln" d="M1120 452V498" marker-end="url(#arr)"/>
+  <text x="278" y="480" class="yn">no</text>
+  <text x="448" y="480" class="yn">yes</text>
+  <text x="618" y="480" class="yn">no</text>
+  <text x="958" y="480" class="yn">no</text>
+  <text x="1128" y="480" class="yn">no</text>
+
+  <!-- End states -->
+  <rect class="end" x="200" y="500" width="140" height="46" rx="4"/>
+  <text x="270" y="520" class="b end-t">Invalid-link page</text>
+  <text x="270" y="536" class="s end-t">friendly message</text>
+
+  <rect class="end" x="370" y="500" width="140" height="46" rx="4"/>
+  <text x="440" y="520" class="b end-t">Read-only page</text>
+  <text x="440" y="536" class="s end-t">deadline passed</text>
+
+  <rect class="end" x="540" y="500" width="140" height="46" rx="4"/>
+  <text x="610" y="520" class="b end-t">429 response</text>
+  <text x="610" y="536" class="s end-t">try again shortly</text>
+
+  <rect class="end" x="880" y="500" width="140" height="46" rx="4"/>
+  <text x="950" y="520" class="b end-t">Show field errors</text>
+  <text x="950" y="536" class="s end-t">form keeps input</text>
+
+  <rect class="end" x="1050" y="500" width="140" height="46" rx="4"/>
+  <text x="1120" y="520" class="b end-t">Show error</text>
+  <text x="1120" y="536" class="s end-t">too many attendees</text>
+
+  <!-- Loop: field errors back to form -->
+  <path class="dash" d="M880 523H780V442" marker-end="url(#arrg)"/>
+  <text x="830" y="516" class="note" text-anchor="middle">fix &amp; resubmit</text>
+
+  <!-- Confirmation and edit loop -->
+  <path class="ln" d="M1295 450V498" marker-end="url(#arr)"/>
+  <rect class="box" x="1220" y="500" width="150" height="60" rx="4"/>
+  <text x="1295" y="526" class="b">Confirmation page</text>
+  <text x="1295" y="544" class="s">+ calendar (.ics)</text>
+
+  <path class="dash" d="M1295 560V615H100V442" marker-end="url(#arrg)"/>
+  <text x="700" y="607" class="note" text-anchor="middle">Guest reopens the same link to edit their response before the deadline (form comes back pre-filled)</text>
+
+  <!-- ===================== DATABASE PANEL ===================== -->
+  <line class="sep" x1="40" y1="655" x2="1360" y2="655"/>
+
+  <rect class="panel" x="30" y="675" width="650" height="280" rx="4"/>
+  <text x="50" y="704" class="section">DATABASE INTERACTIONS</text>
+
+  <g>
+    <circle class="badge" cx="58" cy="736" r="10"/><text x="58" y="740" class="badge-t">1</text>
+    <text x="80" y="740" class="row-b">Create event / functions</text><text x="300" y="740" class="row-r">writes events, event_functions</text>
+
+    <circle class="badge" cx="58" cy="765" r="10"/><text x="58" y="769" class="badge-t">2</text>
+    <text x="80" y="769" class="row-b">Add families</text><text x="300" y="769" class="row-r">writes families, guests, family_functions</text>
+
+    <circle class="badge" cx="58" cy="794" r="10"/><text x="58" y="798" class="badge-t">3</text>
+    <text x="80" y="798" class="row-b">Generate invitation</text><text x="300" y="798" class="row-r">writes invitations (token, status)</text>
+
+    <circle class="badge" cx="58" cy="823" r="10"/><text x="58" y="827" class="badge-t">4</text>
+    <text x="80" y="827" class="row-b">Guest opens link</text><text x="300" y="827" class="row-r">reads invitations, events (deadline); updates open_count</text>
+
+    <circle class="badge" cx="58" cy="852" r="10"/><text x="58" y="856" class="badge-t">5</text>
+    <text x="80" y="856" class="row-b">Show RSVP form</text><text x="300" y="856" class="row-r">reads families, guests, family_functions, rsvps</text>
+
+    <circle class="badge" cx="58" cy="881" r="10"/><text x="58" y="885" class="badge-t">6</text>
+    <text x="80" y="885" class="row-b">Submit RSVP (transaction)</text><text x="300" y="885" class="row-r">writes rsvps, rsvp_attendees, guests, audit_logs</text>
+
+    <circle class="badge" cx="58" cy="910" r="10"/><text x="58" y="914" class="badge-t">7</text>
+    <text x="80" y="914" class="row-b">Dashboard / nudge list</text><text x="300" y="914" class="row-r">reads rsvps, family_functions (pending = no RSVP row)</text>
+
+    <circle class="badge" cx="58" cy="939" r="10"/><text x="58" y="943" class="badge-t">8</text>
+    <text x="80" y="943" class="row-b">Catering report</text><text x="300" y="943" class="row-r">reads rsvp_attendees, guests, event_functions, events</text>
+  </g>
+
+  <!-- ===================== CATERING PANEL ===================== -->
+  <rect class="panel" x="700" y="675" width="680" height="280" rx="4"/>
+  <text x="720" y="704" class="section">CATERING CALCULATION (PER FUNCTION)</text>
+
+  <!-- Row A -->
+  <rect class="box" x="720" y="725" width="180" height="70" rx="4"/>
+  <text x="810" y="751" class="b">1 · Accepted RSVPs</text>
+  <text x="810" y="769" class="s">only for this function</text>
+  <text x="810" y="783" class="s">declined / pending excluded</text>
+  <circle class="badge" cx="734" cy="725" r="10"/><text x="734" y="729" class="badge-t">8</text>
+
+  <rect class="box" x="950" y="725" width="180" height="70" rx="4"/>
+  <text x="1040" y="751" class="b">2 · Count attendees</text>
+  <text x="1040" y="769" class="s">by food_pref</text>
+  <text x="1040" y="783" class="s">and age_group</text>
+
+  <rect class="box" x="1180" y="725" width="180" height="70" rx="4"/>
+  <text x="1270" y="751" class="b">3 · Apply age weights</text>
+  <text x="1270" y="769" class="s">adult 1.0 · child 0.5</text>
+  <text x="1270" y="783" class="s">infant 0 (configurable)</text>
+
+  <path class="ln" d="M900 760H948" marker-end="url(#arr)"/>
+  <path class="ln" d="M1130 760H1178" marker-end="url(#arr)"/>
+
+  <!-- Row B (right to left) -->
+  <rect class="box" x="1180" y="835" width="180" height="70" rx="4"/>
+  <text x="1270" y="861" class="b">4 · Pick buffer %</text>
+  <text x="1270" y="879" class="s">function override if set,</text>
+  <text x="1270" y="893" class="s">else event default</text>
+
+  <rect class="box" x="950" y="835" width="180" height="70" rx="4"/>
+  <text x="1040" y="861" class="b">5 · Compute meals</text>
+  <text x="1040" y="879" class="s">ceil(weighted × (1 + buffer))</text>
+  <text x="1040" y="893" class="s">separately for veg / non-veg</text>
+
+  <rect class="box" x="720" y="835" width="180" height="70" rx="4"/>
+  <text x="810" y="861" class="b">6 · Report + CSV export</text>
+  <text x="810" y="879" class="s">estimated meals vs.</text>
+  <text x="810" y="893" class="s">confirmed headcount</text>
+
+  <path class="ln" d="M1270 795V833" marker-end="url(#arr)"/>
+  <path class="ln" d="M1180 870H1132" marker-end="url(#arr)"/>
+  <path class="ln" d="M950 870H902" marker-end="url(#arr)"/>
+
+  <text x="720" y="935" class="note">Pending families can optionally be shown as a clearly labelled projection, never mixed into confirmed numbers.</text>
+
+  <!-- Legend -->
+  <text x="40" y="982" class="note">Rectangle = step · Diamond = decision · Dark box = single database transaction · Terracotta = error or end state · Dashed = loop or feed · Numbered badge = see Database interactions</text>
+</svg>
